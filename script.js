@@ -4,12 +4,13 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-function findReplace() {
+function findReplace(ev) {
+	ev.preventDefault();
 	//grab the original text
 	let txt = document.getElementById("input").innerHTML;
 	//grab the words to find/replace
-	let findWord = document.getElementById("Find").value;
-	let replaceWord = document.getElementById("Replace").value;
+	let findWord = document.getElementById("find").value;
+	let replaceWord = document.getElementById("replace").value;
 	//create a new regex object to use to search for findWord
 	//include the g and i modifiers: g is for global, i is for case insensitive
 	let re = new RegExp(findWord, "gi");
