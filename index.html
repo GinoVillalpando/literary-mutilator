@@ -3,22 +3,26 @@
 <head>
 	<meta charset="UTF-8">
 	<title>JavaScript Events: Assignment</title>
+
+	<!-- referencing scripts.js in project-->
 	<script src="script.js"></script>
 </head>
 <body>
 
 <!--form that you can use for find & replace-->
-	<div>
-		<label for= "find"> Find: </label>
-		<input type="text" id="find" />
-	</div>
-	<div>
-		<label for="replace">Replace: </label>
-		<input type="text" id="replace"/>
-	</div>
-	<div>
-		<button id="changeText" onclick="findReplace()">Change Text</button>
-	</div>
+<div>
+	<label for="find"> Find: </label>
+	<input type="text" id="find"/>
+</div>
+<div>
+	<label for="replace">Replace: </label>
+	<input type="text" id="replace"/>
+</div>
+<div>
+	<button id="changeText" onclick="findReplace()">Change Text</button>
+</div>
+
+<!-- the paragraph text that will change from find and replace-->
 <div>
 	<h1>This is the text we are going to replace.</h1>
 	<p id="input">Every day is taco ipsum tuesday. Tacos dorados called flautas, or taquitos, for which the tortillas are filled
@@ -41,6 +45,6 @@
 		Tacos dorados called flautas, or taquitos, for which the tortillas are filled with pre-cooked shredded chicken,
 		beef or barbacoa, rolled into an elongated cylinder and deep-fried until crisp.</p>
 </div>
-	<p id="output"></p>
+
 </body>
 </html>

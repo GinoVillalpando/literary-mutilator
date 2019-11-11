@@ -6,31 +6,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function findReplace() {
 	//grab the original text
-	let txt = document.getElementById("input").innerHTML;
+	let string = document.getElementById("input").innerHTML;
 	//grab the words to find/replace
-	let findWord = document.getElementById("find").value;
-	let replaceWord = document.getElementById("replace").value;
+	let findValue = document.getElementById("find").value;
+	let replaceValue = document.getElementById("replace").value;
 	//create a new regex object to use to search for findWord
 	//include the g and i modifiers: g is for global, i is for case insensitive
-	let re = new RegExp(findWord, "gi");
+	let reg = new RegExp(findValue, "gi");
 	//find and replace words in original text using the regex we created
-	let newText = txt.replace(re, replaceWord);
+	let newText = string.replace(reg, replaceValue);
 	//output the new text to the page
 	document.getElementById("input").innerHTML = newText;
 }
 
-
-// function findReplace() {
-// 	// grab the original text
-// 	let string = document.getElementById("find").innerHTML;
-// 	//grab the words to find/replace
-// 	let findWord = document.getElementById("find").value;
-//
-// 	let replaceWord = document.getElementById("replace").value;
-//
-// 	let reg = new RegExp(findWord, "gi")
-//
-// 	let newText = string.replace(reg, replaceWord);
 
 
 
