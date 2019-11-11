@@ -4,8 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-function findReplace(ev) {
-	ev.preventDefault();
+function findReplace() {
 	//grab the original text
 	let txt = document.getElementById("input").innerHTML;
 	//grab the words to find/replace
