@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Drag and drop</title>
+
+	<!-- styling sheet for styling the DOM-->
+	<link rel="stylesheet" href="style.css" />
+
+	<!-- script that contains functions for drag and drop on the image div-->
+	<script src="drag-and-drop-script.js"></script>
+</head>
+<body>
+
+<!--divs that contain empty elements and one element that's draggable that contains random unsplash image-->
+<div class="empty">
+	<div class="fill" draggable="true" ondragstart="event.dataTransfer.setData('text/plain', null)"> </div>
+</div>
+
+<div class="empty">
+</div>
+
+<div class="empty">
+</div>
+
+<div class="empty">
+</div>
+
+<div class="empty">
+</div>
+
+</body>
+</html>
