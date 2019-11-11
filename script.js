@@ -1,14 +1,36 @@
 document.addEventListener("DOMContentLoaded", function() {
 	let btn = document.getElementById("changeText");
-	btn.addEventListener("click", doFindAndReplace);
+	btn.addEventListener("click", findReplace);
 });
 
-function doFindAndReplace(ev) {
-	ev.preventDefault();
-	let find = document.getElementById("find").value;
-	let replace = document.getElementById("replace").value;
 
-	let string = document.getElementById("input").innerText;
-	document.getElementById("input").innerText = string.replace(/({find})/g, replace);
-
+function findReplace() {
+	//grab the original text
+	let txt = document.getElementById("input").innerHTML;
+	//grab the words to find/replace
+	let findWord = document.getElementById("Find").value;
+	let replaceWord = document.getElementById("Replace").value;
+	//create a new regex object to use to search for findWord
+	//include the g and i modifiers: g is for global, i is for case insensitive
+	let re = new RegExp(findWord, "gi");
+	//find and replace words in original text using the regex we created
+	let newText = txt.replace(re, replaceWord);
+	//output the new text to the page
+	document.getElementById("input").innerHTML = newText;
 }
+
+
+// function findReplace() {
+// 	// grab the original text
+// 	let string = document.getElementById("find").innerHTML;
+// 	//grab the words to find/replace
+// 	let findWord = document.getElementById("find").value;
+//
+// 	let replaceWord = document.getElementById("replace").value;
+//
+// 	let reg = new RegExp(findWord, "gi")
+//
+// 	let newText = string.replace(reg, replaceWord);
+
+
+
